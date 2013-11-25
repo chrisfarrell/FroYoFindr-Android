@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="flavors">
+        <item name="chocolate">chocolate</item>
+        <item name="vanilla">vanilla</item>
+        <item name="strawberry">strawberry</item>
+    </string-array>
+    
+    <string-array name="flavorValues">
+        <item name="chocolate">chocolate</item>
+        <item name="vanilla">vanilla</item>
+        <item name="strawberry">strawberry</item>
+    </string-array>
+</resources>

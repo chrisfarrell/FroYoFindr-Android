@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hellogooglemaps"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+	
+    <permission
+    		android:name="com.example.hellogooglemaps.permission.MAPS_RECEIVE"
+    		android:protectionLevel="signature" />
+	<uses-permission android:name="com.example.hellogooglemaps.permission.MAPS_RECEIVE"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.WAVE_LOCK" />
+
+	<uses-feature
+    		android:glEsVersion="0x00020000"
+    		android:required="true"/>
+	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="FroYoFindrApplication"
+        >
+        <activity
+            android:name="com.example.hellogooglemaps.MyMapActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.hellogooglemaps.PlaceDetailsActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name=".PlaceDetails" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.hellogooglemaps.PreferencesActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name=".Preferences" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.hellogooglemaps.InboxActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name=".Inbox" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.hellogooglemaps.DeepLinkActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name=".DeepLink" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <!-- debug key for maps -->
+         
+        <meta-data
+    			android:name="com.google.android.maps.v2.API_KEY"
+    			android:value="@string/google_maps_debug" />
+         
+        <!-- release key for maps -->
+        <meta-data
+    			android:name="com.google.android.maps.v2.API_KEY"
+    			android:value="@string/google_maps_release" />
+        
+        <meta-data
+    			android:name="com.google.android.gms.version"
+    			android:value="@integer/google_play_services_version" />
+		
+        <service android:name="com.parse.PushService"/>
+		<receiver android:name="com.parse.ParseBroadcastReceiver">
+		  <intent-filter>
+		    <action android:name="android.intent.action.BOOT_COMPLETED" />
+		    <action android:name="android.intent.action.USER_PRESENT" />
+		  </intent-filter>
+		</receiver>
+		
+    </application>
+
+</manifest>

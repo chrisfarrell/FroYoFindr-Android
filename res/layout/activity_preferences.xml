@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/orange">
+
+    <TextView
+        android:id="@+id/textViewPreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Preferences"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:paddingTop="20dip"
+        />
+    
+    <TextView
+        android:id="@+id/textViewPreferencesDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Select your favorite flavor for notifications."
+        android:textAppearance="?android:attr/textAppearanceSmall" 
+        android:padding="20dip"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio_group_flavors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center"
+        android:orientation="vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:padding="40dip"
+        >
+
+        <RadioButton
+            android:id="@+id/radio_chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/chocolate" 
+            android:padding="20dip"
+            />
+
+        <RadioButton
+            android:id="@+id/radio_vanilla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/vanilla" 
+            android:padding="20dip"
+            />
+
+        <RadioButton
+            android:id="@+id/radio_strawberry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/strawberry" 
+            android:padding="20dip"
+            />
+    </RadioGroup>
+
+</LinearLayout>

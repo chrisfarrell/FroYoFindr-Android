@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FroYoFindr</string>
+    <string name="action_preferences">Preferences</string>
+    <string name="action_map">Map</string>
+    <string name="action_inbox">Inbox</string>
+    <string name="flavor_key">FLAVOR</string>
+    
+    <string name="channels">channels</string>
+    <string name="chocolate">chocolate</string>
+    <string name="vanilla">vanilla</string>
+    <string name="strawberry">strawberry</string>
+
+</resources>

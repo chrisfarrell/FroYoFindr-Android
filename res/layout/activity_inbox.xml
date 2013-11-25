@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/purple">
+    
+
+        <TextView
+        android:id="@+id/textViewInbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inbox"
+        android:layout_gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:paddingTop="20dip"
+        />
+
+    		<TextView
+        android:id="@+id/textViewInboxDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Previous messages pushed to FroYoFindr."
+        android:textAppearance="?android:attr/textAppearanceSmall" 
+        android:padding="20dip"
+        />
+     
+        <ListView
+        android:id="@+id/task_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center"
+        android:padding="20dip"
+        />
+        
+</LinearLayout>
